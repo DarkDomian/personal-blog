@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+    @apply text-inherit bg-light-400 dark:bg-dark-300;
+}

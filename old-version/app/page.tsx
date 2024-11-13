@@ -1,7 +1,8 @@
 "use client";
 
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+// import ThemeSwitcher from "@/components/ThemeSwitcher";
 import AnimatedLink from "@/components/AnimatedLink";
+import LocaleSwitcher from "./[lang]/_components/locale-switcher";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <main className="h-full flex flex-col gap-5 flex-grow items-center justify-center">
         <h1>Hello, World!</h1>
         <AnimatedLink />
+        <LocaleSwitcher />
       </main>
       <footer className="flex py-1 justify-center">@DarkDomian</footer>
     </div>
