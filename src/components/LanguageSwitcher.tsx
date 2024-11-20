@@ -1,61 +1,47 @@
-'use client'
+'use client';
 
-import React, { useState } from "react"
-import i18n from './i18n'
-import { PiTranslate } from "react-icons/pi"
+import { useCurrentLocale } from "next-i18n-router/client"
 
-const LanguageSwitcher: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import i18nConfig from '@/i18n/i18n.config';
+import { ChangeEvent } from 'react';
 
+export default function LanguageChanger() {
+  const currentLocale = useCurrentLocale(i18nConfig)
+  const router = useRouter();
+  const currentPathname = usePathname();
 
-  const languages = [
-    {code: 'en', label: 'EN'},
-    {code: 'ru', label: 'RU'}
-  ];
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const newLocale = e.target.value;
 
-  const changeLanguage = (lang: string) => {
-    setCurrentLanguage(lang);
-    i18n.changeLanguage(lang);
-    localStorage.setItem('language', currentLanguage);
-    setTimeout(() => {
-      setIsOpen(!isOpen);
-    }, 200);
-  }
+    // set cookie for next-i18n-router
+    const days = 30;
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `NEXT_LOCALE=${newLocale};expires=${date.toUTCString()};path=/`;
 
-  
-  // const toggleLanguage = () => {
-  //   i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
-  //   localStorage.setItem('language', i18n.language);
-  // };
+    // redirect to the new locale path
+    if (
+      currentLocale === i18nConfig.defaultLocale &&
+      !i18nConfig.prefixDefault
+    ) {
+      router.push('/' + newLocale + currentPathname);
+    } else {
+      router.push(
+        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+      );
+    }
 
-  return(
-    <div className="relative flex flex-col justify-center items-center">
-      <button onClick={() => setIsOpen(!isOpen)} className="switcher relative">
-        <PiTranslate className='text-dark dark:text-light size-8'/>
-        <span className="click-effect"></span>
-      </button>
+    router.refresh();
+  };
 
-      {isOpen && (
-        <>
-          {languages.map(lang => (
-            <button
-              key={lang.code}
-              onClick={() => changeLanguage(lang.code)}
-              className={`switcher mt-1 size-fit relative ${currentLanguage === lang.code ? 'bg-light-800 dark:bg-dark-200 pointer-events-none' : ''}`}
-              disabled={currentLanguage === lang.code}
-            >
-              <p className="text-dark dark:text-light font-medium text-center text-xs">{lang.label}</p>
-              <span className="click-effect"></span>
-            </button>
-          )
-          )}
-        </>
-      )}
-      
-    </div>
+  return (
+    <select onChange={handleChange} value={currentLocale}>
+      <option value="en">English</option>
+      <option value="nb">Norsk</option>
+      <option value="ja">日本語</option>
+      <option value="ru">Русский</option>
+    </select>
   );
 }
-
-
-export default LanguageSwitcher;

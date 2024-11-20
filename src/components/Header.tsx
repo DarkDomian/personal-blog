@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitcher";
+import LanguageSwitch from "./LanguageSwitcher";
 
 
 export default function Header() {
@@ -8,6 +9,7 @@ export default function Header() {
             <nav className="container flex px-2 py-2 gap-5">
                 <Link href="/">Home</Link>
                 <ThemeSwitch />
+                <LanguageSwitch />
             </nav>
         </header>
     )

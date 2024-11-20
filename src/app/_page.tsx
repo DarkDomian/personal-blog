@@ -1,6 +1,5 @@
 "use client";
 
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import AnimatedLink from "@/components/AnimatedLink";
 
 export default function Home() {
