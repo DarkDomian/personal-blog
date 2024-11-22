@@ -1,4 +1,18 @@
 {
+    "Metadata": {
+        "title": "Demian's Blog",
+        "description": "Explore coding insights, multilingual journeys, and personal development stories on Demian's Blog.",
+        "lang": "en",
+        "og:title": "Demian's Blog",
+        "og:description": "Discover articles on programming, web development, and language learning, written by Demian.",
+        "og:image": "/images/blog-banner-en.jpg",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Demian's Blog",
+        "twitter:description": "Join Demian's journey through programming, languages, and creative problem-solving.",
+        "twitter:image": "/images/blog-banner-en.jpg"
+    },
     "HomePage": {
         "welcome": "Hello, World!"       
     }

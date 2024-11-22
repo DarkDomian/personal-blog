@@ -1,4 +1,18 @@
-{
+{   
+    "Metadata": {
+        "title": "Блог Демьяна",
+        "description": "Изучайте программирование, языки и личностное развитие вместе с Демьяном.",
+        "lang": "ru",
+        "og:title": "Блог Демьяна",
+        "og:description": "Читайте статьи о веб-разработке, программировании и изучении языков от Демьяна.",
+        "og:image": "/images/blog-banner-ru.jpg",
+        "og:type": "website",
+        "og:locale": "ru_RU",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Блог Демьяна",
+        "twitter:description": "Присоединяйтесь к путешествию Демьяна в мир программирования и языков.",
+        "twitter:image": "/images/blog-banner-ru.jpg"
+    },
     "HomePage": {
         "welcome": "Привет, мир!"       
     }

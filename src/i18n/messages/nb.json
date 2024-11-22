@@ -1,4 +1,18 @@
-{
+{   
+    "Metadata": {
+        "title": "Demians Blogg",
+        "description": "Utforsk programmering, språk og personlig utvikling på Demians blogg.",
+        "lang": "nb",
+        "og:title": "Demians Blogg",
+        "og:description": "Les artikler om programmering, webutvikling og språklæring skrevet av Demian.",
+        "og:image": "/images/blog-banner-nb.jpg",
+        "og:type": "website",
+        "og:locale": "nb_NO",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Demians Blogg",
+        "twitter:description": "Bli med på Demians reise gjennom programmering, språk og kreativ problemløsning.",
+        "twitter:image": "/images/blog-banner-nb.jpg"
+    },
     "HomePage": {
         "welcome": "Hei, verden!"       
     }

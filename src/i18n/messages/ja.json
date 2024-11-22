@@ -1,4 +1,18 @@
-{
+{   
+    "Metadata": {
+        "title": "デミアンのブログ",
+        "description": "デミアンのブログでプログラミング、多言語学習、自己開発の記事をチェックしましょう。",
+        "lang": "ja",
+        "og:title": "デミアンのブログ",
+        "og:description": "デミアンが執筆するプログラミング、ウェブ開発、多言語学習の旅をご覧ください。",
+        "og:image": "/images/blog-banner-ja.jpg",
+        "og:type": "website",
+        "og:locale": "ja_JP",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "デミアンのブログ",
+        "twitter:description": "プログラミングや語学の世界を探索するデミアンの旅に参加してください。",
+        "twitter:image": "/images/blog-banner-ja.jpg"
+    },
     "HomePage": {
         "welcome": "こんにちは、世界"       
     }
