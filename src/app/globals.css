@@ -5,3 +5,11 @@
 ::selection {
     @apply text-inherit bg-light-400 dark:bg-dark-300;
 }
+
+.animated-link {
+    @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gradient-to-r after:from-primary after:to-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
+}
+
+.theme-switcher {
+    @apply transform duration-150 hover:rotate-12 hover:fill-primary-900 hover:stroke-primary-900 dark:hover:fill-secondary-100 dark:hover:stroke-secondary-100 cursor-pointer;
+}

@@ -1,3 +1,5 @@
+import { Header } from '@/components/Header';
+
 import {setRequestLocale} from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import i18nConfig from "@/i18n/i18n.config";
@@ -25,6 +27,7 @@ export default async function RootLayout({
 
   return ( 
     <>
+      <Header params={{ locale }}/>
       {children}    
     </>
   );

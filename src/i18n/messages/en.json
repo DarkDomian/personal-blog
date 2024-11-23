@@ -13,7 +13,18 @@
         "twitter:description": "Join Demian's journey through programming, languages, and creative problem-solving.",
         "twitter:image": "/images/blog-banner-en.jpg"
     },
+    "NotFound": {
+        "message": "Could not find requested resource",
+        "home": "Return home"
+    },
+    "Header": {
+        "home": "Home",
+        "blog": "Blog"
+    },
     "HomePage": {
         "welcome": "Hello, World!"       
+    },
+    "BlogPage": {
+        "welcome": "Welcome to the blog!"
     }
 }

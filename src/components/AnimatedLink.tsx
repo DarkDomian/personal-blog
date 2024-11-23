@@ -22,7 +22,7 @@ const AnimatedLink: React.FC<AnimatedLinkProps> = ({ icon="link", children=icon,
         <IconComponent className="group-hover:text-primary mr-2 text-dark-200 dark:text-light-800 transition-colors duration-300"/>
         <a
         href={href}
-        className="relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-primary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+        className="animated-link"
         >
         {children || icon}
         </a>

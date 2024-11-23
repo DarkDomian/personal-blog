@@ -13,7 +13,18 @@
         "twitter:description": "Присоединяйтесь к путешествию Демьяна в мир программирования и языков.",
         "twitter:image": "/images/blog-banner-ru.jpg"
     },
+    "NotFound": {
+        "message": "Запрашиваемый ресурс не найден",
+        "home": "Вернуться на главную"
+    },
+    "Header": {
+        "home": "Главная",
+        "blog": "Блог"
+    },
     "HomePage": {
         "welcome": "Привет, мир!"       
+    },
+    "BlogPage": {
+        "welcome": "Добро пожаловать в блог!"
     }
 }

@@ -1,7 +1,6 @@
 "use client";
 
 // compnents
-import Header from "@/components/Header";
 import { Providers } from "@/components/Proveders";
 // style
 import localFont from "next/font/local";
@@ -30,8 +29,7 @@ export default function RootLayout({
     <body
       className={`${geistSans.variable} ${geistMono.variable} antialiased bg-light dark:bg-dark text-dark dark:text-light transition-all duration-200 flex flex-col min-h-screen`}
     >
-      <Providers >
-        <Header />        
+      <Providers >       
           {children}
       </Providers>
     </body>

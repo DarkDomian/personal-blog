@@ -13,7 +13,18 @@
         "twitter:description": "Bli med på Demians reise gjennom programmering, språk og kreativ problemløsning.",
         "twitter:image": "/images/blog-banner-nb.jpg"
     },
+    "NotFound": {
+        "message": "Kunne ikke finne forespurt ressurs",
+        "home": "Gå tilbake til hjem"
+    },
+    "Header": {
+        "home": "Hjem",
+        "blog": "Blogg"
+    },
     "HomePage": {
         "welcome": "Hei, verden!"       
+    },
+    "BlogPage": {
+        "welcome": "Velkommen til bloggen!"
     }
 }

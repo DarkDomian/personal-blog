@@ -3,10 +3,13 @@ import { i18nRouter } from 'next-i18n-router';
 import { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
+  // forming a response
   const response = i18nRouter(request, i18nConfig)
+  // taking the locale defined by a router
   const locale = response.headers.get('x-next-i18n-router-locale') || 'en';
+  // set taken locale to header wich work with next-intl
   response.headers.set('X-NEXT-INTL-LOCALE', locale)
-  // 'x-next-i18n-router-locale' => { name: 'x-next-i18n-router-locale', value: 'nb' }
+  
   return response;
 }
 
@@ -14,15 +17,3 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: '/((?!api|static|.*\\..*|_next).*)'
 };
-
-// WE CAN DELETE ALL THINGS BELLOW IF ALL WORK FINE
-
-// import createMiddleware from 'next-intl/middleware';
-// import {routing} from './i18n/routing';
- 
-// export default createMiddleware(routing);
- 
-// export const config = {
-//   // Match only internationalized pathnames
-//   matcher: ['/', '/(de|en)/:path*']
-// };

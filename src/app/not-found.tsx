@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 
-export default function NotFound() {
+import { headers } from "next/headers";
+import { getTranslations } from "next-intl/server";
+
+
+export default async function NotFound() {
+  const locale = (await headers()).get('X-NEXT-INTL-LOCALE') || 'en';
+  
+  const t = await getTranslations({ locale, namespace: "NotFound"});
+
   return (
     <div className="h-screen flex items-center flex-col justify-center gap-8">
       <div className="flex items-center divide-x divide-dark-200 dark:divide-light-900">
@@ -9,7 +17,7 @@ export default function NotFound() {
           404
         </span>
         <span className="pl-3 h-14 flex items-center leading-tight self-center">
-          Could not find requested resource
+          {t('message')}
         </span>
       </div>
       <div className="grid gap-8 items-start justify-center">
@@ -21,7 +29,7 @@ export default function NotFound() {
           >
             <div className="font-bold text-dark-400 group-hover:text-primary-700 dark:text-light-500 dark:group-hover:text-primary-200  flex justify-center transition-all duration-600">
               <IoIosArrowBack />
-              <span>Return Home</span>
+              <span>{t('home')}</span>
             </div>
           </Link>
         </div>

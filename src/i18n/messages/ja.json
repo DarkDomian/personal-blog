@@ -13,7 +13,18 @@
         "twitter:description": "プログラミングや語学の世界を探索するデミアンの旅に参加してください。",
         "twitter:image": "/images/blog-banner-ja.jpg"
     },
+    "NotFound": {
+        "message": "リクエストされたリソースが見つかりませんでした",
+        "home": "ホームに戻る"
+    },
+    "Header": {
+        "home": "ホーム",
+        "blog": "ブログ"
+    },
     "HomePage": {
         "welcome": "こんにちは、世界"       
+    },
+    "BlogPage": {
+        "welcome": "ブログへようこそ！"
     }
 }
