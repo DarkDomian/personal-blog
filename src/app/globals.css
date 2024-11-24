@@ -10,6 +10,11 @@
     @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gradient-to-r after:from-primary after:to-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
 }
 
+/* not in use now */
 .theme-switcher {
-    @apply transform duration-150 hover:rotate-12 hover:fill-primary-900 hover:stroke-primary-900 dark:hover:fill-secondary-100 dark:hover:stroke-secondary-100 cursor-pointer;
+    @apply h-full w-full p-2 transform duration-150 hover:rotate-12 hover:fill-primary-900 hover:stroke-primary-900 dark:hover:fill-secondary-100 dark:hover:stroke-secondary-100 cursor-pointer;
+}
+
+.switcher {
+    @apply w-full h-full p-2 cursor-pointer hover:dark:bg-dark-300 hover:bg-light-500 rounded-full overflow-visible;
 }

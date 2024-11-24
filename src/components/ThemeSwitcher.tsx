@@ -6,12 +6,7 @@ import { useTheme } from "next-themes";
 // import Image from "next/image";
 
 
-type ThemeSwitchProps = {
-  switchClass: string;
-  sceletonClass: string;
-}
-
-const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ switchClass, sceletonClass }) => {
+const ThemeSwitch: React.FC = () => {
 
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
@@ -22,15 +17,19 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ switchClass, sceletonClass })
   if (!mounted)
     return (
       // <div className={`${size} bg-neutral-600 animate-pulse rounded-full`}></div>
-      <div className={sceletonClass}></div>
+      <div className="h-10 w-10 bg-light-500 dark:bg-dark-400 animate-pulse rounded-full"></div>
     );
 
   if (resolvedTheme === "dark") {
-    return <FiSun onClick={() => setTheme("light")} className={switchClass}/>;
+    return <div className="aspect-square h-full">
+      <FiSun onClick={() => setTheme("light")} className="switcher"/>
+    </div>;
   }
 
   if (resolvedTheme === "light") {
-    return <FiMoon onClick={() => setTheme("dark")} className={switchClass}/>;
+    return <div className="aspect-square h-full">
+      <FiMoon onClick={() => setTheme("dark")} className="switcher"/>
+    </div>;
   }
 }
 export default ThemeSwitch;
