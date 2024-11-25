@@ -22,7 +22,7 @@ export async function Header({ params }: { params: { locale: string } }) {
           <MyLogo
             className="fill-dark hover:fill-dark-300 hover:dark:fill-light-50 dark:fill-light-300 h-full"
             size="40px"
-            alt="A beautiful logo of my application"
+            alt="Demian Domozhirov logo"
           />
         </Link>
         <div className="flex items-center h-full gap-5">

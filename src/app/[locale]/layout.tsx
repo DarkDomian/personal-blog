@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 import {setRequestLocale} from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -28,7 +29,8 @@ export default async function RootLayout({
   return ( 
     <>
       <Header params={{ locale }}/>
-      {children}    
+      {children}
+      <Footer />
     </>
   );
 }

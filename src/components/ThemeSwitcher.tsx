@@ -5,9 +5,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 // import Image from "next/image";
 
-
 const ThemeSwitch: React.FC = () => {
-
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -21,15 +19,41 @@ const ThemeSwitch: React.FC = () => {
     );
 
   if (resolvedTheme === "dark") {
-    return <div className="aspect-square h-full">
-      <FiSun onClick={() => setTheme("light")} className="switcher"/>
-    </div>;
+    return (
+      <div className="aspect-square h-full">
+        <FiSun
+          onClick={() => setTheme("light")}
+          // onKeyDown={(e) => {
+          //   if (e.key === "Enter") {
+          //     setTheme("light");
+          //   }}
+          // }
+          className="switcher"
+          aria-haspopup="false"
+          // tabIndex={0}
+          aria-label="Change Language"
+        />
+      </div>
+    );
   }
 
   if (resolvedTheme === "light") {
-    return <div className="aspect-square h-full">
-      <FiMoon onClick={() => setTheme("dark")} className="switcher"/>
-    </div>;
+    return (
+      <div className="aspect-square h-full">
+        <FiMoon
+          onClick={() => setTheme("dark")}
+          // onKeyDown={(e) => {
+          //   if (e.key === "Enter") {
+          //     setTheme("dark");
+          //   }}
+          // }
+          className="switcher"
+          aria-haspopup="false"
+          // tabIndex={0}
+          aria-label="Change Language"
+        />
+      </div>
+    );
   }
-}
+};
 export default ThemeSwitch;

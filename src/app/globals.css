@@ -16,5 +16,9 @@
 }
 
 .switcher {
-    @apply w-full h-full p-2 cursor-pointer hover:dark:bg-dark-300 hover:bg-light-500 rounded-full overflow-visible;
+    @apply w-full h-full p-2 cursor-pointer hover:dark:bg-dark-300 hover:bg-light-500 rounded-full overflow-visible ;
+}
+
+.social-media-link {
+    @apply text-dark-200 dark:text-light-800 transition-colors duration-300 cursor-pointer;
 }

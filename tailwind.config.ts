@@ -66,6 +66,12 @@ export default {
         },
         'link' : '#3949AB',
       },
+      boxShadow: {
+        'footer-dark': '0 -4px 10px rgba(20, 20, 20, 0.3)',
+        'footer-light': '0 -4px 10px rgba(128, 128, 128, 0.3)',
+        'article': '0 0 40px rgba(216, 27, 96, 0.3)',
+        'article-hovered': '0 0 45px rgba(255, 183, 77, 0.3)',
+      },
     },
   },
   plugins: [],
